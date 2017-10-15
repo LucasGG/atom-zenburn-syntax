@@ -1,0 +1,199 @@
+@import "syntax-variables";
+
+atom-text-editor {
+  background-color: @normal-background;
+  color: @normal-foreground;
+
+  .wrap-guide {
+    background-color: @syntax-wrap-guide-color;
+  }
+
+  .indent-guide {
+    color: @syntax-indent-guide-color;
+  }
+
+  .invisible-character {
+    color: @syntax-invisible-character-color;
+  }
+
+  .cursor-line {
+    background-color: @cursor-line-background;
+  }
+
+  .gutter {
+    background-color: @syntax-gutter-background-color;
+    color: @syntax-gutter-text-color;
+
+    .line-number {
+      background-color: @column-line-number-background;
+      color: @column-line-number-foreground;
+
+      &.cursor-line {
+        background-color: @syntax-gutter-background-color-selected;
+        color: @syntax-gutter-text-color-selected;
+      }
+
+      &.cursor-line-no-selection {
+        color: @syntax-gutter-text-color-selected;
+      }
+    }
+
+    .folded {
+      background-color: @column-folded-background;
+    }
+  }
+
+  .invisible {
+    color: @normal-foreground;
+  }
+
+  .cursor {
+    color: @cursor-color;
+  }
+
+  .selection .region {
+    background-color: @selection-color;
+  }
+}
+
+atom-text-editor .gutter .line-number.bookmarked .icon-right:before {
+  color: inherit;
+}
+
+// Syntax styles
+
+.syntax--comment {
+  color: @comment-foreground;
+  font-style: @comment-font-style;
+}
+
+.syntax--string {
+  color: @string-foreground;
+  font-style: @string-font-style;
+
+  &.syntax--single {
+    color: @character-foreground;
+    font-style: @character-font-style;
+  }
+}
+
+.syntax--keyword {
+  color: @keyword-foreground;
+  font-style: @keyword-font-style;
+
+  &.syntax--operator {
+    color: @operator-foreground;
+    font-style: @operator-font-style;
+  }
+
+  &.syntax--control {
+    color: @conditional-foreground;
+    font-style: @conditional-font-style;
+
+    // [BUG] End statements in some languages are not identified, code commented.
+    &.syntax--def, &.syntax--class, &.syntax--module {
+      // color: @definition-foreground;
+      // font-style: @definition-font-style;
+    }
+
+    &.syntax--pseudo-method {
+      color: @statement-foreground;
+      font-style: @statement-font-style;
+    }
+  }
+
+  &.syntax--other {
+    &.syntax--special-method {
+      color: @precond-foreground;
+      font-style: @precond-font-style;
+    }
+  }
+}
+
+.syntax--type {
+  color: @type-foreground;
+  font-style: @type-font-style;
+}
+
+.syntax--constant {
+  color: @constant-foreground;
+  font-style: @constant-font-style;
+
+  &.syntax--boolean {
+    color: @boolean-foreground;
+    font-style: @boolean-font-style;
+  }
+
+  &.syntax--numeric {
+    color: @number-foreground;
+    font-style: @number-font-style;
+  }
+
+  // [TODO] Change the style of this in future, they are not the original.
+  &.syntax--other.syntax--symbol.syntax--hashkey {
+    color: @definition-foreground;
+    font-style: @definition-font-style;
+  }
+}
+
+.syntax--variable {
+  color: @identifier-foreground;
+  font-style: @identifier-font-style;
+
+  &.syntax--constant {
+    color: @typedef-foreground;
+    font-style: @typedef-font-style;
+  }
+
+  // [BUG] Atom do not identify below things correctly in some languages, so
+  // they are set to normal appearance.
+  &.syntax--parameter.syntax--function,
+  &.syntax--other.syntax--object {
+    color: @normal-foreground;
+    font-style: @normal-font-style;
+  }
+
+  &.syntax--other.syntax--object.syntax--property {
+    color: @identifier-foreground;
+    font-style: @identifier-font-style;
+  }
+}
+
+.syntax--support {
+  &.syntax--class {
+    color: @typedef-foreground;
+    font-style: @typedef-font-style;
+  }
+
+  // [TODO] Change the style of this in future, they are not the original.
+  &.syntax--function.syntax--kernel {
+    color: @definition-foreground;
+    font-style: @definition-font-style;
+  }
+}
+
+.syntax--entity {
+  &.syntax--name {
+    &.syntax--function {
+      color: @function-foreground;
+      font-style: @function-font-style;
+    }
+
+    &.syntax--class, &.syntax--module {
+      color: @typedef-foreground;
+      font-style: @typedef-font-style;
+    }
+  }
+}
+
+.syntax--punctuation {
+  &.syntax--inheritance {
+    color: @operator-foreground;
+    font-style: @operator-font-style;
+  }
+
+  &.syntax--definition.syntax--constant.syntax--hashkey {
+    color: @definition-foreground;
+    font-style: @definition-font-style;
+  }
+}

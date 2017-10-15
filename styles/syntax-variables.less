@@ -1,0 +1,72 @@
+// General
+@normal-background: #3f3f3f;
+@normal-font-style: normal;
+@normal-foreground: #dcdccc;
+
+// Cursor
+@cursor-color: #8faf9f;
+@selection-color: lighten(@normal-background, 10%);
+
+// Cursor line
+@cursor-line-background: #434443;
+@cursor-line-number-background: #4f4f4f;
+@cursor-line-number-foreground: #d2d39b;
+
+// Column
+@column-background: #484848;
+@column-line-number-background: #262626;
+@column-line-number-foreground: #9fafaf;
+@column-folded-background: lighten(@column-line-number-background, 10%);
+
+// Syntax
+@boolean-font-style: normal;
+@boolean-foreground: #dca3a3;
+@character-font-style: bold;
+@character-foreground: #dca3a3;
+@comment-font-style: italic;
+@comment-foreground: #7f9f7f;
+@conditional-font-style: bold;
+@conditional-foreground: #f0dfaf;
+@constant-font-style: bold;
+@constant-foreground: #dca3a3;
+@definition-font-style: bold;
+@definition-foreground: #ffcfaf;
+@function-font-style: normal;
+@function-foreground: #efef8f;
+@identifier-font-style: normal;
+@identifier-foreground: #efdcbc;
+@keyword-font-style: bold;
+@keyword-foreground: #f0dfaf;
+@number-font-style: normal;
+@number-foreground: #8cd0d3;
+@operator-font-style: normal;
+@operator-foreground: #f0efd0;
+@precond-font-style: bold;
+@precond-foreground: #dfaf8f;
+@statement-font-style: normal;
+@statement-foreground: #e3ceab;
+@string-font-style: normal;
+@string-foreground: #cc9393;
+@type-font-style: bold;
+@type-foreground: #dfdfbf;
+@typedef-font-style: bold;
+@typedef-foreground: #dfe4cf;
+
+/* Atom */
+
+// Guide colors
+@syntax-wrap-guide-color: lighten(@normal-background, 10%);
+@syntax-indent-guide-color: lighten(@normal-background, 5%);
+@syntax-invisible-character-color: lighten(@normal-background, 5%);
+
+// Gutter colors
+@syntax-gutter-text-color: @normal-background;
+@syntax-gutter-text-color-selected: @cursor-line-number-foreground;
+@syntax-gutter-background-color: @column-background;
+@syntax-gutter-background-color-selected: @cursor-line-number-background;
+
+// For git diff info. i.e. in the gutter
+@syntax-color-renamed: @number-foreground;
+@syntax-color-added: @cursor-color;
+@syntax-color-modified: @definition-foreground;
+@syntax-color-removed: @constant-foreground;

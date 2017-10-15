@@ -1,0 +1,15 @@
+{
+  "name": "zenburn-syntax",
+  "theme": "syntax",
+  "version": "1.0.0",
+  "description": "Vim's Zenburn copy",
+  "keywords": [
+    "syntax",
+    "theme"
+  ],
+  "repository": "https://github.com/atom/zenburn-syntax",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
