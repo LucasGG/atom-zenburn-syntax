@@ -2,12 +2,12 @@
   "name": "zenburn-syntax",
   "theme": "syntax",
   "version": "1.0.0",
-  "description": "Vim's Zenburn copy",
+  "description": "Zenburn syntax",
   "keywords": [
     "syntax",
     "theme"
   ],
-  "repository": "https://github.com/atom/zenburn-syntax",
+  "repository": "https://github.com/lucasgg/atom-zenburn-syntax",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
