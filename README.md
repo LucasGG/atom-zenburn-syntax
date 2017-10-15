@@ -8,4 +8,4 @@ This new one looks very similar to the original https://github.com/jnurmine/Zenb
 
 - Enter theme's root folder with terminal
 - Do `apm link`
-- Set yout theme in Atom configuration
+- Set yout theme in Atom
